@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
+import Button from 'Components/Button';
+
 const goGusGo = keyframes`
   0% { margin-left: 0 }
   100% {  margin-left: 2000px }
@@ -55,6 +57,17 @@ const Gus = styled.img`
   width: 400px;
 `;
 
+const ButtonContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+`;
+
+const ButtonApply = styled(Button)`
+    width: 300px;
+`;
+
 const Wrapper = styled.div`
   padding: 30px 20px;
   position: relative;
@@ -81,10 +94,14 @@ function Header() {
         <MainText>
           Ваш сайт - наша работа
         </MainText>
-        
+
         <DescriptionText>
           Создаем сайты для любой задумки
         </DescriptionText>
+
+        <ButtonContainer>
+          <ButtonApply>Рассчитать стоимость</ButtonApply>
+        </ButtonContainer>
       </MainContainer>
     </Wrapper>
   )
